@@ -27,7 +27,7 @@ Branch: main
 Directory: public_html
 Caminho de instalação: [DEIXE VAZIO] ou .
 Username: andressabgomes10
-   Password: [SEU_TOKEN_AQUI]
+   Password: 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
 Auto Deploy: ✅ ON
 ```
 
