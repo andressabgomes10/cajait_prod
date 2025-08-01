@@ -1,0 +1,33 @@
+{
+  "name": "Cajá - Tecnologia Artesanal",
+  "short_name": "Cajá",
+  "description": "Desenvolvimento de MVPs e software personalizado com metodologia ágil",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#F6D100",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "https://customer-assets.emergentagent.com/job_caja-tech/artifacts/ab2iz7t6_i%CC%81cone%20fundo%20transparente.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://customer-assets.emergentagent.com/job_caja-tech/artifacts/ab2iz7t6_i%CC%81cone%20fundo%20transparente.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "screenshots": [
+    {
+      "src": "https://customer-assets.emergentagent.com/job_caja-tech/artifacts/haipaigv_Logo%20fundo%20transparente.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}
