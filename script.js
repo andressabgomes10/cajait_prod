@@ -224,38 +224,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Controle de scroll - esconder perto da seção de contato
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const contactSection = document.getElementById('contato');
-        
-        if (contactSection) {
-            const contactPosition = contactSection.offsetTop;
-            const windowHeight = window.innerHeight;
-            
-            // Esconder quando próximo à seção de contato
-            if (scrollTop + windowHeight > contactPosition - 100) {
-                helpChatWidget.style.opacity = '0';
-                helpChatWidget.style.visibility = 'hidden';
-                if (isMenuOpen) {
-                    closeMenu();
-                }
-            } else {
-                helpChatWidget.style.opacity = '1';
-                helpChatWidget.style.visibility = 'visible';
-            }
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    // Widget sempre visível - sem controle de scroll
+    // O widget permanece fixo e visível durante toda a navegação
+    helpChatWidget.style.opacity = '1';
+    helpChatWidget.style.visibility = 'visible';
     
-    // Entrada animada após carregamento
-    setTimeout(() => {
-        helpChatWidget.style.opacity = '1';
-        helpChatWidget.style.visibility = 'visible';
-        console.log('Widget animação de entrada concluída');
-    }, 1500);
+    // Widget sempre visível
+    console.log('Widget sempre visível configurado');
     
     console.log('Widget de ajuda inicializado com sucesso!');
 });
