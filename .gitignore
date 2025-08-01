@@ -1,0 +1,46 @@
+# Arquivos de desenvolvimento local
+local_contacts.json
+contact_log.txt
+*.log
+
+# Arquivos de configuração local
+config/database_local.php
+contact_local.php
+
+# Arquivos temporários
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos de backup
+*.bak
+*.backup
+
+# Arquivos de cache
+cache/
+*.cache
+
+# Arquivos de sessão
+sessions/
+*.sess
+
+# Arquivos de upload (se houver)
+uploads/
+temp/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.production
+
+# Node modules (se usar npm/yarn)
+node_modules/
+package-lock.json
+yarn.lock 
