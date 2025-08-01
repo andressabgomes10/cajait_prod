@@ -94,6 +94,9 @@
             <!-- First Services Grid -->
             <div class="services-grid">
                 <article class="service-card">
+                    <div class="service-image-placeholder" aria-label="Ilustração de desenvolvimento ágil">
+                        📊
+                    </div>
                     <div class="service-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
@@ -118,6 +121,9 @@
                 </article>
                 
                 <article class="service-card">
+                    <div class="service-image-placeholder" aria-label="Ilustração de MVP e validação">
+                        ⚡
+                    </div>
                     <div class="service-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
@@ -140,6 +146,9 @@
                 </article>
                 
                 <article class="service-card">
+                    <div class="service-image-placeholder" aria-label="Ilustração de treinamentos e capacitação">
+                        👥
+                    </div>
                     <div class="service-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -323,6 +332,36 @@
                 </div>
             </div>
             
+            <!-- Team Section -->
+            <div class="about-visual">
+                <article class="team-member">
+                    <div class="team-photo" aria-label="Foto da Andressa, fundadora da Cajá">
+                        👩‍💻
+                    </div>
+                    <h4 class="team-name">Andressa</h4>
+                    <p class="team-role">Fundadora & Desenvolvedora</p>
+                    <p class="team-description">Especialista em desenvolvimento ágil e criação de MVPs que realmente funcionam no mercado.</p>
+                </article>
+                
+                <article class="team-member">
+                    <div class="team-photo" aria-label="Foto do time de desenvolvimento">
+                        🚀
+                    </div>
+                    <h4 class="team-name">Time Cajá</h4>
+                    <p class="team-role">Desenvolvedores & Designers</p>
+                    <p class="team-description">Equipe multidisciplinar focada em entregar soluções digitais com qualidade artesanal.</p>
+                </article>
+                
+                <article class="team-member">
+                    <div class="team-photo" aria-label="Foto de parceiros e colaboradores">
+                        🤝
+                    </div>
+                    <h4 class="team-name">Parceiros</h4>
+                    <p class="team-role">Especialistas & Consultores</p>
+                    <p class="team-description">Rede de profissionais especializados para projetos complexos e específicos.</p>
+                </article>
+            </div>
+            
             <!-- Stats Section -->
             <aside class="stats-section">
                 <div class="stat">
@@ -366,12 +405,12 @@
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="company">Empresa</label>
+                            <label for="company">Empresa <span class="optional-text">(opcional)</span></label>
                             <input type="text" id="company" name="company" placeholder="Nome da sua empresa">
                         </div>
                         
                         <div class="form-group">
-                            <label for="service">Serviço de interesse</label>
+                            <label for="service">Serviço de interesse <span class="optional-text">(opcional)</span></label>
                             <select id="service" name="service">
                                 <option value="">Selecione um serviço</option>
                                 <option value="mvp">MVP Rápido</option>
@@ -379,6 +418,7 @@
                                 <option value="gestao">Gestão de Produtos Digitais</option>
                                 <option value="treinamento">Treinamentos Práticos</option>
                                 <option value="consultoria">Consultoria</option>
+                                <option value="outro">Outro</option>
                             </select>
                         </div>
                     </div>
@@ -506,6 +546,13 @@
             </button>
         </div>
     </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn" onclick="scrollToTop()" aria-label="Voltar ao topo da página">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18,15 12,9 6,15"></polyline>
+        </svg>
+    </button>
 
     <!-- JavaScript -->
     <script src="script.js"></script>

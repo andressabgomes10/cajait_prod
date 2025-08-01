@@ -41,6 +41,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Active section highlighting
+function updateActiveSection() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+    const scrollPosition = window.scrollY + 100; // Offset for header
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            // Remove active class from all links
+            navLinks.forEach(link => {
+                link.classList.remove('nav-link-active');
+            });
+
+            // Add active class to current section link
+            const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('nav-link-active');
+            }
+        }
+    });
+}
+
+// Scroll to top button functionality
+function toggleScrollToTop() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+}
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Add scroll event listeners
+window.addEventListener('scroll', () => {
+    updateActiveSection();
+    toggleScrollToTop();
+});
+
 // Form handling
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
