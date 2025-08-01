@@ -213,6 +213,11 @@ p {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    transform: scale(1.1);
 }
 
 .hamburger {
@@ -220,13 +225,18 @@ p {
     height: 2px;
     background: #111827;
     margin: 3px 0;
-    transition: 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
 }
 
 .mobile-menu {
     display: none;
     padding: 1.5rem;
     border-top: 1px solid #F3F4F6;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-nav-link {
