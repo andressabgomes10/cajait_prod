@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Toggle mobile menu
     mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+        if (mobileMenu.style.display === 'block') {
+            mobileMenu.style.display = 'none';
+        } else {
+            mobileMenu.style.display = 'block';
+        }
     });
     
     // Close mobile menu when clicking on links
