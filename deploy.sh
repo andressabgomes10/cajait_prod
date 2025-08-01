@@ -54,8 +54,23 @@ log "📋 Copiando arquivos para produção..."
 
 # Arquivos principais
 cp index.html "$DEPLOY_DIR/"
-cp style.css "$DEPLOY_DIR/"
-cp script.js "$DEPLOY_DIR/"
+
+# Copiar arquivos minificados se existirem, senão copiar originais
+if [ -f "minified/style.min.css" ]; then
+    cp minified/style.min.css "$DEPLOY_DIR/style.css"
+    log "✅ CSS minificado copiado"
+else
+    cp style.css "$DEPLOY_DIR/"
+    log "⚠️ CSS original copiado (minificado não encontrado)"
+fi
+
+if [ -f "minified/script.min.js" ]; then
+    cp minified/script.min.js "$DEPLOY_DIR/script.js"
+    log "✅ JS minificado copiado"
+else
+    cp script.js "$DEPLOY_DIR/"
+    log "⚠️ JS original copiado (minificado não encontrado)"
+fi
 
 # Arquivos PHP
 cp contact.php "$DEPLOY_DIR/"
